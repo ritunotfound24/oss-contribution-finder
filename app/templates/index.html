@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Find your next open-source contribution.</h1>
+  <p class="lead">
+    Enter a GitHub username. We read the public repos to learn your languages and interests,
+    then rank open "good first issue" and "help wanted" issues by how well they fit you.
+  </p>
+
+  <form action="/find" method="get" class="search card">
+    <label for="username">GitHub username</label>
+    <div class="row">
+      <input id="username" name="username" placeholder="octocat" value="{{ username or '' }}" required maxlength="39" autocomplete="off">
+      <button type="submit">Find issues</button>
+    </div>
+    <details {% if level or languages %}open{% endif %}>
+      <summary>Options</summary>
+      <div class="options">
+        <label>Experience level
+          <select name="level">
+            <option value="">Estimate from my profile</option>
+            {% for l in levels %}<option value="{{ l }}" {% if l == level %}selected{% endif %}>{{ l|capitalize }}</option>{% endfor %}
+          </select>
+        </label>
+        <label>Languages (comma separated)
+          <input name="languages" placeholder="Python, TypeScript" value="{{ languages or '' }}">
+        </label>
+      </div>
+    </details>
+    {% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+    {% if demo %}<p class="muted small">Demo mode: results use bundled sample data.</p>{% endif %}
+  </form>
+</section>
+
+<section class="how">
+  <div class="card"><h3>1 · Profile</h3><p>Languages weighted by stars and recent activity, plus topics from your repos.</p></div>
+  <div class="card"><h3>2 · Difficulty</h3><p>An ML classifier estimates whether each issue is beginner, intermediate or advanced.</p></div>
+  <div class="card"><h3>3 · Ranking</h3><p>Language fit, text similarity, difficulty fit, freshness, availability and repo health.</p></div>
+</section>
+{% endblock %}

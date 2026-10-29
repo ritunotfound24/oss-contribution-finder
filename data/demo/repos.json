@@ -1,0 +1,99 @@
+[
+  {
+    "full_name": "openlearn/lumen-ui",
+    "description": "Accessible React component library",
+    "language": "TypeScript",
+    "topics": [
+      "react",
+      "components",
+      "accessibility",
+      "design-system"
+    ],
+    "stargazers_count": 4200,
+    "forks_count": 380,
+    "open_issues_count": 96,
+    "pushed_at": "2026-10-27T10:00:00Z",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "full_name": "openlearn/pagekit",
+    "description": "Static site generator for documentation, built on Next.js",
+    "language": "TypeScript",
+    "topics": [
+      "nextjs",
+      "documentation",
+      "static-site"
+    ],
+    "stargazers_count": 1850,
+    "forks_count": 140,
+    "open_issues_count": 41,
+    "pushed_at": "2026-10-25T10:00:00Z",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "full_name": "mlcommons-demo/tabular-kit",
+    "description": "Feature engineering and model evaluation helpers for scikit-learn",
+    "language": "Python",
+    "topics": [
+      "machine-learning",
+      "scikit-learn",
+      "data-science"
+    ],
+    "stargazers_count": 2600,
+    "forks_count": 210,
+    "open_issues_count": 58,
+    "pushed_at": "2026-10-26T10:00:00Z",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "full_name": "netsec-demo/packetlens",
+    "description": "Network traffic analysis and anomaly detection toolkit",
+    "language": "Python",
+    "topics": [
+      "security",
+      "network",
+      "anomaly-detection",
+      "iot"
+    ],
+    "stargazers_count": 930,
+    "forks_count": 88,
+    "open_issues_count": 23,
+    "pushed_at": "2026-10-20T10:00:00Z",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "full_name": "apiforge/swiftapi-extras",
+    "description": "Plugins and middleware for FastAPI apps",
+    "language": "Python",
+    "topics": [
+      "fastapi",
+      "api",
+      "middleware"
+    ],
+    "stargazers_count": 610,
+    "forks_count": 45,
+    "open_issues_count": 19,
+    "pushed_at": "2026-09-30T10:00:00Z",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "full_name": "oldtools/legacy-grid",
+    "description": "jQuery data grid (unmaintained)",
+    "language": "JavaScript",
+    "topics": [
+      "jquery",
+      "grid"
+    ],
+    "stargazers_count": 300,
+    "forks_count": 60,
+    "open_issues_count": 140,
+    "pushed_at": "2021-02-01T10:00:00Z",
+    "fork": false,
+    "archived": true
+  }
+]

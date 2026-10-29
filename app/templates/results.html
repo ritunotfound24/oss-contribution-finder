@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}{{ result.profile.username }} · Contribution Finder{% endblock %}
+{% block content %}
+{% set p = result.profile %}
+<a href="/" class="back">← New search</a>
+
+<section class="card profile">
+  <div>
+    <h1>{{ p.name or p.username }} <span class="muted">@{{ p.username }}</span></h1>
+    {% if p.bio %}<p class="muted">{{ p.bio }}</p>{% endif %}
+    <p class="small muted">{{ p.public_repos }} public repos · {{ p.followers }} followers · on GitHub {{ p.account_age_years }} yrs</p>
+  </div>
+  <div class="profile-stats">
+    <div><span class="label">Level</span><span class="pill level-{{ result.level }}">{{ result.level|capitalize }}</span></div>
+    <div>
+      <span class="label">Languages</span>
+      <div class="bars">
+        {% for lang, w in p.languages.items() %}{% if loop.index <= 5 %}
+        <div class="bar"><span>{{ lang }}</span><i style="width: {{ (w * 100)|round(0) }}%"></i><b>{{ (w * 100)|round(0)|int }}%</b></div>
+        {% endif %}{% else %}<p class="small muted">No language data</p>{% endfor %}
+      </div>
+    </div>
+    {% if p.topics %}
+    <div><span class="label">Topics</span><div class="chips">{% for t in p.topics[:8] %}<span class="chip">{{ t }}</span>{% endfor %}</div></div>
+    {% endif %}
+  </div>
+</section>
+
+{% if result.projects %}
+<h2>Projects to join</h2>
+<section class="grid">
+  {% for rec in result.projects %}
+  <a class="card project" href="{{ rec.repo.html_url }}" target="_blank" rel="noopener">
+    <div class="project-head">
+      <strong>{{ rec.repo.full_name }}</strong>
+      <span class="score">{{ (rec.score * 100)|round(0)|int }}</span>
+    </div>
+    <p class="small muted">{{ rec.repo.description }}</p>
+    <p class="small">★ {{ "{:,}".format(rec.repo.stars) }}{% if rec.repo.language %} · {{ rec.repo.language }}{% endif %}</p>
+    <ul class="reasons">{% for r in rec.reasons %}<li>{{ r }}</li>{% endfor %}</ul>
+  </a>
+  {% endfor %}
+</section>
+{% endif %}
+
+<h2>Issues ranked for you</h2>
+<p class="small muted">Searched {{ result.searched_languages|join(", ") if result.searched_languages else "all languages" }} · {{ result.issues|length }} issues</p>
+{% if not result.issues %}
+<p class="card">No open issues found. Try other languages in the search options.</p>
+{% endif %}
+<ol class="issues">
+  {% for s in result.issues[:30] %}
+  <li class="card issue">
+    <div class="issue-score">{{ (s.score * 100)|round(0)|int }}</div>
+    <div class="issue-body">
+      <a href="{{ s.issue.html_url }}" target="_blank" rel="noopener" class="issue-title">{{ s.issue.title }}</a>
+      <p class="small muted">{{ s.issue.repo_full_name }} #{{ s.issue.number }} · {{ s.issue.comments }} comment{{ "" if s.issue.comments == 1 else "s" }}</p>
+      <div class="chips">
+        <span class="pill level-{{ s.difficulty }}">{{ s.difficulty }} · {{ (s.difficulty_confidence * 100)|round(0)|int }}%</span>
+        {% for l in s.issue.labels[:4] %}<span class="chip">{{ l }}</span>{% endfor %}
+      </div>
+      {% if s.reasons %}<ul class="reasons">{% for r in s.reasons %}<li>{{ r }}</li>{% endfor %}</ul>{% endif %}
+      <details class="small"><summary>Score breakdown</summary>
+        <table class="breakdown">
+          {% for k, v in s.breakdown.items() %}<tr><td>{{ k|replace("_", " ") }}</td><td><i style="width: {{ (v * 100)|round(0) }}%"></i></td><td>{{ (v * 100)|round(0)|int }}</td></tr>{% endfor %}
+        </table>
+      </details>
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% endblock %}

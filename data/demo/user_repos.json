@@ -1,0 +1,91 @@
+[
+  {
+    "full_name": "demo-user/chat-ui",
+    "description": "Next.js chat interface with streaming responses",
+    "language": "TypeScript",
+    "topics": [
+      "nextjs",
+      "react",
+      "chatbot",
+      "llm"
+    ],
+    "stargazers_count": 12,
+    "forks_count": 2,
+    "open_issues_count": 1,
+    "pushed_at": "2026-10-02T10:00:00Z",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "full_name": "demo-user/scoreboard",
+    "description": "Game score tracker",
+    "language": "JavaScript",
+    "topics": [
+      "react",
+      "game"
+    ],
+    "stargazers_count": 3,
+    "forks_count": 0,
+    "open_issues_count": 0,
+    "pushed_at": "2026-10-03T10:00:00Z",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "full_name": "demo-user/iot-ids",
+    "description": "Intrusion detection for IoT networks with scikit-learn",
+    "language": "Python",
+    "topics": [
+      "machine-learning",
+      "security",
+      "iot",
+      "scikit-learn"
+    ],
+    "stargazers_count": 5,
+    "forks_count": 1,
+    "open_issues_count": 2,
+    "pushed_at": "2026-09-20T10:00:00Z",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "full_name": "demo-user/fastapi-notes",
+    "description": "Notes API built with FastAPI and PostgreSQL",
+    "language": "Python",
+    "topics": [
+      "fastapi",
+      "api",
+      "postgresql"
+    ],
+    "stargazers_count": 2,
+    "forks_count": 0,
+    "open_issues_count": 0,
+    "pushed_at": "2026-06-11T10:00:00Z",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "full_name": "demo-user/dotfiles",
+    "description": "My shell config",
+    "language": "Shell",
+    "topics": [],
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "open_issues_count": 0,
+    "pushed_at": "2024-01-11T10:00:00Z",
+    "fork": false,
+    "archived": false
+  },
+  {
+    "full_name": "demo-user/react",
+    "description": "Fork of React",
+    "language": "JavaScript",
+    "topics": [],
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "open_issues_count": 0,
+    "pushed_at": "2025-03-01T10:00:00Z",
+    "fork": true,
+    "archived": false
+  }
+]

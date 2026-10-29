@@ -1,0 +1,289 @@
+[
+  {
+    "id": 1001,
+    "number": 412,
+    "title": "Add aria-label to IconButton examples in docs",
+    "body": "Several IconButton examples in the docs have no accessible name. Add aria-label props to the examples.",
+    "repository_url": "https://api.github.com/repos/openlearn/lumen-ui",
+    "html_url": "https://github.com/openlearn/lumen-ui/issues/412",
+    "labels": [
+      {
+        "name": "good first issue"
+      },
+      {
+        "name": "documentation"
+      }
+    ],
+    "comments": 0,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-26T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1002,
+    "number": 398,
+    "title": "Tooltip flickers when hovering quickly between triggers",
+    "body": "Moving the mouse quickly between two triggers causes the tooltip to flicker. Needs a shared delay group.",
+    "repository_url": "https://api.github.com/repos/openlearn/lumen-ui",
+    "html_url": "https://github.com/openlearn/lumen-ui/issues/398",
+    "labels": [
+      {
+        "name": "help wanted"
+      },
+      {
+        "name": "bug"
+      }
+    ],
+    "comments": 4,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-22T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1003,
+    "number": 377,
+    "title": "Rewrite focus management in Dialog to support nested portals",
+    "body": "Focus trap breaks with nested portals. Redesign focus scope handling across portals.",
+    "repository_url": "https://api.github.com/repos/openlearn/lumen-ui",
+    "html_url": "https://github.com/openlearn/lumen-ui/issues/377",
+    "labels": [
+      {
+        "name": "help wanted"
+      },
+      {
+        "name": "difficulty: hard"
+      }
+    ],
+    "comments": 11,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-10T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1004,
+    "number": 233,
+    "title": "Fix broken link to configuration reference",
+    "body": "The link on the getting started page returns 404.",
+    "repository_url": "https://api.github.com/repos/openlearn/pagekit",
+    "html_url": "https://github.com/openlearn/pagekit/issues/233",
+    "labels": [
+      {
+        "name": "good first issue"
+      }
+    ],
+    "comments": 1,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-24T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1005,
+    "number": 219,
+    "title": "Support dark mode toggle that persists across pages",
+    "body": "Add a theme toggle stored in localStorage and respect prefers-color-scheme.",
+    "repository_url": "https://api.github.com/repos/openlearn/pagekit",
+    "html_url": "https://github.com/openlearn/pagekit/issues/219",
+    "labels": [
+      {
+        "name": "help wanted"
+      },
+      {
+        "name": "enhancement"
+      }
+    ],
+    "comments": 2,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-18T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1006,
+    "number": 201,
+    "title": "Incremental builds for large documentation sites",
+    "body": "Only rebuild changed pages by tracking content hashes.",
+    "repository_url": "https://api.github.com/repos/openlearn/pagekit",
+    "html_url": "https://github.com/openlearn/pagekit/issues/201",
+    "labels": [
+      {
+        "name": "help wanted"
+      }
+    ],
+    "comments": 7,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-05T10:00:00Z",
+    "assignee": {
+      "login": "someone-else"
+    }
+  },
+  {
+    "id": 1007,
+    "number": 615,
+    "title": "Add docstring examples for train_test_split_by_group",
+    "body": "The helper has no usage example in its docstring.",
+    "repository_url": "https://api.github.com/repos/mlcommons-demo/tabular-kit",
+    "html_url": "https://github.com/mlcommons-demo/tabular-kit/issues/615",
+    "labels": [
+      {
+        "name": "good first issue"
+      },
+      {
+        "name": "documentation"
+      }
+    ],
+    "comments": 0,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-25T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1008,
+    "number": 602,
+    "title": "Support class weights in the cross-validation report",
+    "body": "Allow passing sample weights through to the scoring functions and add tests.",
+    "repository_url": "https://api.github.com/repos/mlcommons-demo/tabular-kit",
+    "html_url": "https://github.com/mlcommons-demo/tabular-kit/issues/602",
+    "labels": [
+      {
+        "name": "help wanted"
+      }
+    ],
+    "comments": 3,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-21T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1009,
+    "number": 588,
+    "title": "Fix numerical instability in log-loss for extreme probabilities",
+    "body": "Log loss returns inf for probabilities of exactly 0. Clip and add tests.",
+    "repository_url": "https://api.github.com/repos/mlcommons-demo/tabular-kit",
+    "html_url": "https://github.com/mlcommons-demo/tabular-kit/issues/588",
+    "labels": [
+      {
+        "name": "help wanted"
+      },
+      {
+        "name": "bug"
+      }
+    ],
+    "comments": 2,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-19T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1010,
+    "number": 144,
+    "title": "Add unit test for pcap parser with empty files",
+    "body": "Parsing an empty pcap raises an unhelpful error. Add a test and a clear error message.",
+    "repository_url": "https://api.github.com/repos/netsec-demo/packetlens",
+    "html_url": "https://github.com/netsec-demo/packetlens/issues/144",
+    "labels": [
+      {
+        "name": "good first issue"
+      },
+      {
+        "name": "tests"
+      }
+    ],
+    "comments": 0,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-23T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1011,
+    "number": 139,
+    "title": "Isolation forest detector for IoT traffic features",
+    "body": "Add an anomaly detector based on isolation forest for the IoT flow features, with evaluation on the sample dataset.",
+    "repository_url": "https://api.github.com/repos/netsec-demo/packetlens",
+    "html_url": "https://github.com/netsec-demo/packetlens/issues/139",
+    "labels": [
+      {
+        "name": "help wanted"
+      },
+      {
+        "name": "machine-learning"
+      }
+    ],
+    "comments": 5,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-17T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1012,
+    "number": 127,
+    "title": "Streaming parser for multi-GB captures",
+    "body": "Parsing loads whole files in memory. Implement a streaming parser with backpressure.",
+    "repository_url": "https://api.github.com/repos/netsec-demo/packetlens",
+    "html_url": "https://github.com/netsec-demo/packetlens/issues/127",
+    "labels": [
+      {
+        "name": "help wanted"
+      },
+      {
+        "name": "difficulty: hard"
+      }
+    ],
+    "comments": 9,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-09-29T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1013,
+    "number": 88,
+    "title": "Document environment variables for the rate limiter",
+    "body": "No list of supported env vars for the rate limit middleware. Add a table to the README.",
+    "repository_url": "https://api.github.com/repos/apiforge/swiftapi-extras",
+    "html_url": "https://github.com/apiforge/swiftapi-extras/issues/88",
+    "labels": [
+      {
+        "name": "good first issue"
+      },
+      {
+        "name": "docs"
+      }
+    ],
+    "comments": 0,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-12T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1014,
+    "number": 81,
+    "title": "Respect Retry-After header in the HTTP client plugin",
+    "body": "When upstream returns 429 we retry immediately. Respect Retry-After and back off exponentially.",
+    "repository_url": "https://api.github.com/repos/apiforge/swiftapi-extras",
+    "html_url": "https://github.com/apiforge/swiftapi-extras/issues/81",
+    "labels": [
+      {
+        "name": "help wanted"
+      }
+    ],
+    "comments": 1,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-08T10:00:00Z",
+    "assignee": null
+  },
+  {
+    "id": 1015,
+    "number": 950,
+    "title": "Fix typo in README",
+    "body": "Typo in the install section.",
+    "repository_url": "https://api.github.com/repos/oldtools/legacy-grid",
+    "html_url": "https://github.com/oldtools/legacy-grid/issues/950",
+    "labels": [
+      {
+        "name": "good first issue"
+      }
+    ],
+    "comments": 0,
+    "created_at": "2026-09-01T10:00:00Z",
+    "updated_at": "2026-10-01T10:00:00Z",
+    "assignee": null
+  }
+]

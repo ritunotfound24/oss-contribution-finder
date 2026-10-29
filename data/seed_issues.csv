@@ -1,0 +1,75 @@
+title,body,label
+Fix typo in README installation section,"The install command says pip instal instead of pip install. Small docs fix.",beginner
+Add missing docstring to utils.format_date,"The helper format_date has no docstring. Please add one describing params and return value.",beginner
+Broken link to contributing guide in docs,"The link in docs/index.md points to a 404 page. It should point to CONTRIBUTING.md.",beginner
+Update copyright year in footer,"Footer still shows 2023. Update the year in the website template.",beginner
+Add alt text to images on the landing page,"Several images on the homepage have no alt attribute which hurts accessibility. Add descriptive alt text.",beginner
+Rename variable tmp to something descriptive,"In parser.py the variable tmp is used for the token list. Rename it for readability.",beginner
+Add example for --verbose flag in CLI docs,"The CLI docs do not show how to use the verbose flag. Add a short usage example.",beginner
+Button color does not match design spec,"The submit button uses #3366ff but the design uses #2255ee. Change the CSS variable.",beginner
+Add unit test for slugify with empty string,"slugify('') currently returns '-' . Add a test and make it return an empty string.",beginner
+Spelling mistakes in error messages,"Several error messages say 'occured' instead of 'occurred'. Fix the spelling across the codebase.",beginner
+Add .editorconfig file,"We should add an .editorconfig so contributors use consistent indentation.",beginner
+Improve wording of 404 page,"The 404 page just says Not Found. Make it friendlier and link back to home.",beginner
+Add type hints to config loader,"load_config has no type hints. Add them for parameters and return type.",beginner
+Missing translation for Spanish settings page,"The settings page has three untranslated strings in es.json. Add the translations.",beginner
+Add badge for test coverage to README,"Add a codecov badge next to the build badge in README.",beginner
+Sort imports in cli module,"Imports in cli.py are not sorted. Run isort and commit the result.",beginner
+Placeholder text overflows input on mobile,"On small screens the search placeholder overflows. Shorten it or add text-overflow ellipsis.",beginner
+Document environment variables in README,"There is no list of supported env vars. Add a table to the README.",beginner
+Add favicon to documentation site,"The docs site uses the default favicon. Add our logo as favicon.",beginner
+Remove unused import in models.py,"Linter warns that datetime is imported but unused in models.py.",beginner
+Add a code of conduct,"We do not have a CODE_OF_CONDUCT.md yet. Add the Contributor Covenant.",beginner
+Make help text consistent in CLI commands,"Some commands end help text with a period and some don't. Make them consistent.",beginner
+Add example notebook link to docs,"Link the getting-started notebook from the tutorials page.",beginner
+Dark mode text is hard to read in tables,"Table text color is too dark in dark mode. Adjust the CSS color token.",beginner
+Fix wrong default value shown in docs for timeout,"Docs say timeout defaults to 30 but code uses 10. Update the docs.",beginner
+Add test for parse_version with pre-release tags,"parse_version('1.2.0-rc1') is untested. Add a small unit test.",beginner
+Support configuring retry count via environment variable,"Allow MAX_RETRIES env var to override the hard-coded retry count in the HTTP client and add tests.",intermediate
+Add pagination to the /users API endpoint,"The endpoint returns all users at once. Add limit and offset query params with validation and tests.",intermediate
+CSV export ignores selected filters,"Exporting to CSV exports all rows instead of the filtered set. The export handler needs to reuse the query builder.",intermediate
+Add caching layer for repository metadata,"We call the GitHub API for the same repo many times. Add an in-memory TTL cache with invalidation.",intermediate
+Implement search debounce in the frontend,"Every keystroke triggers a request. Debounce the search input and cancel in-flight requests.",intermediate
+Add OAuth login with GitHub,"Users want to sign in with GitHub. Add the OAuth flow, store tokens securely and handle errors.",intermediate
+Refactor date handling to use timezone-aware datetimes,"We mix naive and aware datetimes which causes off-by-one bugs in reports. Refactor to UTC-aware everywhere.",intermediate
+Add support for YAML config files,"Config currently only supports JSON. Add YAML support with the same schema validation.",intermediate
+Flaky test in test_scheduler due to timing,"test_scheduler fails intermittently on CI. Replace sleep-based waits with a fake clock.",intermediate
+Add progress bar for long downloads,"Downloads give no feedback. Show a progress bar using content-length when available.",intermediate
+Validate request body with schema and return 422,"Invalid JSON bodies currently cause 500 errors. Validate with a schema and return helpful 422 responses.",intermediate
+Add dark mode toggle that persists,"Implement a theme toggle stored in localStorage and respect prefers-color-scheme on first load.",intermediate
+Migrate CI from Travis to GitHub Actions,"Port the existing Travis config to a GitHub Actions workflow with a matrix for Python 3.10 to 3.13.",intermediate
+Add rate limit handling to API client,"When the API returns 429 we crash. Respect Retry-After and back off exponentially.",intermediate
+Implement drag and drop reordering for list items,"Users want to reorder tasks. Add drag and drop with keyboard accessibility and persist the order.",intermediate
+Support Windows paths in file watcher,"The file watcher breaks on Windows because of backslash paths. Normalize paths and add tests.",intermediate
+Add Docker Compose setup for local development,"Provide a docker-compose file with the app, Postgres and Redis for local development.",intermediate
+Webhook signature verification,"Incoming webhooks are not verified. Verify the HMAC signature header and reject invalid payloads.",intermediate
+Add bulk delete endpoint,"Allow deleting multiple items in one request with proper transaction handling.",intermediate
+Improve error messages for invalid plugin configuration,"Plugin config errors show a stack trace. Catch validation errors and show the failing key.",intermediate
+Add i18n support to email templates,"Email templates are English only. Load translations based on the user locale.",intermediate
+Memory leak when streaming large responses,"Memory grows unbounded when streaming responses over 1GB. Investigate buffering in the streaming layer.",intermediate
+Add incremental build support,"Rebuilding the whole site takes minutes. Only rebuild changed pages by tracking file hashes.",intermediate
+Implement export to PDF for reports,"Add a PDF export for the analytics report with charts rendered server side.",intermediate
+Add sorting by multiple columns in data table,"Allow shift-click to sort by several columns and reflect the sort in the URL.",intermediate
+Redesign plugin architecture to support async hooks,"The plugin system is synchronous. Redesign the hook registry to support async plugins without breaking existing ones.",advanced
+Race condition in distributed lock causes duplicate jobs,"Under high load two workers acquire the same Redis lock. Investigate the lease renewal logic and fencing tokens.",advanced
+Rewrite query planner to push down filters,"Filters are applied after joins which is slow for large tables. Implement predicate pushdown in the planner.",advanced
+Implement incremental garbage collection,"Stop-the-world GC pauses reach 200ms. Implement an incremental mark and sweep collector.",advanced
+Add support for distributed training across multiple GPUs,"Training only uses one GPU. Add DistributedDataParallel support with gradient synchronization and checkpointing.",advanced
+Deadlock when closing connection pool during shutdown,"Shutdown hangs because pool close waits on connections held by in-flight async tasks. Needs a rethink of the lifecycle.",advanced
+Implement CRDT based collaborative editing,"Replace the lock-based editor sync with a CRDT so offline edits merge without conflicts.",advanced
+Optimize SIMD path for string search on ARM,"The NEON path is slower than scalar on some inputs. Profile and rewrite the inner loop.",advanced
+Design a stable public API for the compiler backend,"Third-party backends depend on internals. Design and document a stable versioned backend API.",advanced
+Support streaming parsing for huge JSON files,"Parsing loads the whole file in memory. Implement a streaming tokenizer with backpressure.",advanced
+Implement zero-downtime schema migrations,"Migrations lock tables. Implement expand and contract migrations with dual writes.",advanced
+Kernel panic when unloading driver under load,"Unloading the module while I/O is in flight triggers a use-after-free. Needs careful refcounting fixes.",advanced
+Add JIT compilation for hot paths,"Interpretation is slow for numeric loops. Prototype a tracing JIT for the hot loop subset.",advanced
+Consensus algorithm fails during network partition,"Raft leader election stalls after a partition heals. Investigate term handling and log matching.",advanced
+Reduce p99 latency of the scheduler under contention,"p99 latency spikes to 2s at 10k tasks. Profile lock contention and redesign the run queue.",advanced
+Implement end-to-end encryption for sync,"Data is encrypted in transit but not at rest on the server. Design E2E encryption with key rotation.",advanced
+Port the rendering engine to WebGPU,"Move the WebGL renderer to WebGPU while keeping a fallback path.",advanced
+Fix numerical instability in mixed precision training,"Loss becomes NaN with fp16. Investigate loss scaling and layer norm precision.",advanced
+Refactor type checker to support generics with variance,"The type checker treats generics as invariant. Implement variance inference and update error messages.",advanced
+Implement sharding for the vector index,"Single node index runs out of memory beyond 100M vectors. Design sharding and query fan-out.",advanced
+Make the build reproducible across platforms,"Builds differ between Linux and macOS due to timestamps and path ordering. Make outputs bit-for-bit reproducible.",advanced
+Lock-free queue occasionally loses items,"The MPMC queue drops items under heavy contention. Suspect an ABA problem in the CAS loop.",advanced
+Implement custom memory allocator for small objects,"malloc overhead dominates for small nodes. Add a slab allocator with thread-local caches.",advanced

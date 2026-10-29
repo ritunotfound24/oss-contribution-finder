@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# Trained models are rebuilt from data/ on first run
+models/*.joblib
+
+# Datasets downloaded with scripts/build_dataset.py
+data/github_issues*.csv
+
+.DS_Store
